@@ -76,7 +76,7 @@ class Robot:
 
         atexit.register(self.__shutdown)
 
-    def wheel_speed(self, left: float, right: float) -> None:
+    def set_speeds(self, left: float, right: float) -> None:
         """Sets the speeds of the robot's wheels.
 
 Parameters:
@@ -111,7 +111,7 @@ Parameters:
 
     def stop_wheels(self) -> None:
         """Sets both wheels' speeds to zero"""
-        self.wheel_speed(0, 0)
+        self.set_speeds(0, 0)
 
     def __shutdown(self) -> None:
 
